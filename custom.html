@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Valley Nursery — Custom Orders</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Bloom Valley Nursery Logo" />
+        <span>Bloom Valley Nursery</span>
+      </div>
+      <nav aria-label="Main Navigation">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <ul id="navMenu" class="nav" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="gallery.html">Gallery</a></li>
+          <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+          <li role="none"><a role="menuitem" href="custom.html" class="active">Custom Orders</a></li>
+          <li role="none"><button id="viewCartBtn" class="btn-link" aria-haspopup="dialog">View Cart</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="container">
+      <h1>Custom Plant Package</h1>
+      <p>Build your own set for your home or office. We'll assemble and deliver.</p>
+
+      <form id="customForm" aria-labelledby="customTitle">
+        <h2 id="customTitle">Choose Components</h2>
+        <div class="form-row">
+          <label for="size">Planter Size</label>
+          <select id="size" name="size">
+            <option value="small">Small ($15)</option>
+            <option value="medium">Medium ($25)</option>
+            <option value="large">Large ($40)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="plantType">Plant Type</label>
+          <select id="plantType" name="plantType">
+            <option value="succulent">Succulent (+$8)</option>
+            <option value="fern">Fern (+$10)</option>
+            <option value="palm">Parlor Palm (+$18)</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="Preferred colors, placement, etc."></textarea>
+        </div>
+        <div class="form-row">
+          <button type="button" id="saveBuildBtn" class="btn">Save Build</button>
+          <button type="button" id="addBuildToCartBtn" class="btn-secondary">Add Build to Cart</button>
+        </div>
+        <p id="customFeedback" class="sr-only" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; Bloom Valley Nursery</p>
+    </div>
+  </footer>
+
+  <dialog id="cartDialog" aria-labelledby="cartTitle">
+    <h2 id="cartTitle">Your Cart</h2>
+    <div id="cartItems" class="cart-items" aria-live="polite"></div>
+    <div class="cart-actions">
+      <button id="processOrderBtn" class="btn">Process Order</button>
+      <button id="clearCartBtn" class="btn-secondary">Clear Cart</button>
+      <button id="closeCartBtn" class="btn-link">Close</button>
+    </div>
+  </dialog>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

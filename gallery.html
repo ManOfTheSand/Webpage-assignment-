@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Valley Nursery — Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Bloom Valley Nursery Logo" />
+        <span>Bloom Valley Nursery</span>
+      </div>
+      <nav aria-label="Main Navigation">
+        <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <ul id="navMenu" class="nav" role="menubar">
+          <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+          <li role="none"><a role="menuitem" href="gallery.html" class="active">Gallery</a></li>
+          <li role="none"><a role="menuitem" href="about.html">About Us</a></li>
+          <li role="none"><a role="menuitem" href="custom.html">Custom Orders</a></li>
+          <li role="none"><button id="viewCartBtn" class="btn-link" aria-haspopup="dialog">View Cart</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="container">
+      <h1>Gallery</h1>
+      <p>Browse our collection of indoor and outdoor favorites.</p>
+
+      <div class="grid gallery">
+        <!-- Reuse plant assets and provide add-to-cart -->
+        <article class="card">
+          <img src="assets/plant1.png" alt="Snake Plant close-up" />
+          <h3>Snake Plant</h3>
+          <p class="price">$24.99</p>
+          <button class="btn add-to-cart" data-id="plant_snake" data-name="Snake Plant" data-price="24.99">Add to Cart</button>
+        </article>
+
+        <article class="card">
+          <img src="assets/plant2.png" alt="Monstera leaf detail" />
+          <h3>Monstera</h3>
+          <p class="price">$39.99</p>
+          <button class="btn add-to-cart" data-id="plant_monstera" data-name="Monstera" data-price="39.99">Add to Cart</button>
+        </article>
+
+        <article class="card">
+          <img src="assets/plant3.png" alt="Fiddle Leaf Fig glossy leaves" />
+          <h3>Fiddle Leaf Fig</h3>
+          <p class="price">$59.99</p>
+          <button class="btn add-to-cart" data-id="plant_fig" data-name="Fiddle Leaf Fig" data-price="59.99">Add to Cart</button>
+        </article>
+
+        <article class="card">
+          <img src="assets/plant4.png" alt="Aloe Vera in stone pot" />
+          <h3>Aloe Vera</h3>
+          <p class="price">$14.99</p>
+          <button class="btn add-to-cart" data-id="plant_aloe" data-name="Aloe Vera" data-price="14.99">Add to Cart</button>
+        </article>
+
+        <article class="card">
+          <img src="assets/plant5.png" alt="ZZ Plant on shelf" />
+          <h3>ZZ Plant</h3>
+          <p class="price">$29.99</p>
+          <button class="btn add-to-cart" data-id="plant_zz" data-name="ZZ Plant" data-price="29.99">Add to Cart</button>
+        </article>
+
+        <article class="card">
+          <img src="assets/plant6.png" alt="Peace Lily in decorative planter" />
+          <h3>Peace Lily</h3>
+          <p class="price">$19.99</p>
+          <button class="btn add-to-cart" data-id="plant_lily" data-name="Peace Lily" data-price="19.99">Add to Cart</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>&copy; Bloom Valley Nursery</p>
+    </div>
+  </footer>
+
+  <dialog id="cartDialog" aria-labelledby="cartTitle">
+    <h2 id="cartTitle">Your Cart</h2>
+    <div id="cartItems" class="cart-items" aria-live="polite"></div>
+    <div class="cart-actions">
+      <button id="processOrderBtn" class="btn">Process Order</button>
+      <button id="clearCartBtn" class="btn-secondary">Clear Cart</button>
+      <button id="closeCartBtn" class="btn-link">Close</button>
+    </div>
+  </dialog>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
